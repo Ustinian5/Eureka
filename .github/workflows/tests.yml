@@ -20,6 +20,7 @@ jobs:
         shell: pwsh
         run: |
           node --check extension\popup.js
+          node --check extension\options.js
           node --check extension\content.js
           node --check web\app.js
       - name: Document artifacts

@@ -216,3 +216,7 @@ D:\conda_envs\eureka\python.exe -B -m unittest discover -s backend\tests -v
 - Chrome 上架清单：[docs/chrome-store-readiness.md](docs/chrome-store-readiness.md)
 - 隐私政策：[docs/privacy-policy.md](docs/privacy-policy.md)
 - 商店文案草稿：[docs/store-listing.md](docs/store-listing.md)
+
+## 开源协议
+
+本项目使用 MIT License，见 [LICENSE](LICENSE)。
