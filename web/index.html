@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Eureka Agent Workspace</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <main class="workspace">
+      <section class="panel input-panel">
+        <h1>Eureka</h1>
+        <p>多 Agent 网页调研工作台</p>
+
+        <label>
+          模型
+          <select id="providerSelect"></select>
+        </label>
+
+        <label>
+          报告模板
+          <select id="templateSelect">
+            <option value="summary">网页总结</option>
+            <option value="study_note">课程学习笔记</option>
+            <option value="tech_research" selected>技术调研报告</option>
+            <option value="product_compare">产品/竞品分析</option>
+            <option value="paper_reading">论文阅读笔记</option>
+          </select>
+        </label>
+
+        <label>
+          页面标题
+          <input id="titleInput" value="Model Context Protocol 介绍">
+        </label>
+
+        <label>
+          页面 URL
+          <input id="urlInput" value="https://example.test/mcp">
+        </label>
+
+        <label>
+          网页正文
+          <textarea id="contextInput" rows="10">Model Context Protocol 让 AI 应用以统一方式连接工具、数据源和上下文。它适合构建 Agent 应用，减少每个工具单独适配的成本。</textarea>
+        </label>
+
+        <label>
+          用户问题
+          <textarea id="queryInput" rows="4">对比 MCP 和传统 API 的区别，并说明适合哪些场景。</textarea>
+        </label>
+
+        <div class="actions">
+          <button id="demoButton">运行离线演示</button>
+          <button id="runButton">调用真实模型</button>
+        </div>
+      </section>
+
+      <section class="panel history-panel">
+        <h2>历史报告</h2>
+        <button id="refreshHistoryButton">刷新历史</button>
+        <ul id="historyList"></ul>
+      </section>
+
+      <section class="panel trace-panel">
+        <h2>Agent Trace</h2>
+        <ol id="traceList"></ol>
+      </section>
+
+      <section class="panel report-panel">
+        <div class="report-header">
+          <h2>最终报告</h2>
+          <div class="report-actions">
+            <button id="copyButton">复制</button>
+            <button id="exportMarkdownButton">导出 MD</button>
+            <button id="exportPdfButton">导出 PDF</button>
+          </div>
+        </div>
+        <p id="savedState">尚未保存报告</p>
+        <pre id="reportOutput"></pre>
+        <h2>证据来源</h2>
+        <div id="evidenceList"></div>
+      </section>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>

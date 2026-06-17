@@ -1,0 +1,30 @@
+name: tests
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  test:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: conda-incubator/setup-miniconda@v3
+        with:
+          environment-file: environment.yml
+          activate-environment: eureka
+      - name: Python tests
+        shell: pwsh
+        run: python -B -W ignore -m unittest discover -s backend\tests -v
+      - name: JavaScript syntax
+        shell: pwsh
+        run: |
+          node --check extension\popup.js
+          node --check extension\content.js
+          node --check web\app.js
+      - name: Document artifacts
+        shell: pwsh
+        run: |
+          Test-Path docs\report.md
+          Test-Path docs\report.pdf
+          Test-Path docs\README.pdf

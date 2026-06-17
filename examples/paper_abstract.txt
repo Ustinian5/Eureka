@@ -1,0 +1,3 @@
+Large language model agents combine planning, tool use, memory, and reflection. Recent work shows that tool-augmented agents can solve tasks that require external information, but they also introduce risks such as hallucinated citations and unreliable tool outputs.
+
+Evaluating agent systems requires more than judging final answers. A complete evaluation should inspect intermediate plans, tool calls, evidence quality, and whether final claims are supported by verifiable sources.

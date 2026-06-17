@@ -1,0 +1,5 @@
+NotebookLM, Kimi, ChatGPT, DeepSeek, GLM, and Minimax all represent different directions for large model products.
+
+NotebookLM focuses on source-grounded reading and note taking. Kimi emphasizes long-context document processing. ChatGPT offers a broad assistant ecosystem with tools. DeepSeek is known for reasoning models and cost-effective APIs. GLM provides Chinese developer products and application templates. Minimax focuses on multimodal generation, voice, and agent-oriented products.
+
+A practical AI product should not only generate fluent text. It should also preserve sources, support reproducible workflows, and solve a concrete user problem.

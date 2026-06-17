@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Eureka</title>
+    <link rel="stylesheet" href="popup.css">
+  </head>
+  <body>
+    <main class="shell">
+      <header class="topbar">
+        <div>
+          <h1>Eureka</h1>
+          <p id="status">准备读取当前网页</p>
+        </div>
+        <div class="header-actions">
+          <button id="settingsButton" class="icon-button" title="设置" aria-label="设置">⚙</button>
+          <button id="clearButton" class="icon-button" title="清空输出" aria-label="清空输出">×</button>
+        </div>
+      </header>
+
+      <section class="connection">
+        <span id="connectionDot" class="dot"></span>
+        <span id="connectionText">检查本地后端连接</span>
+      </section>
+
+      <section class="composer">
+        <div class="selectors">
+          <label>
+            模型
+            <select id="providerSelect">
+              <option value="demo">Demo Offline Model</option>
+            </select>
+          </label>
+          <label>
+            模板
+            <select id="templateSelect">
+              <option value="summary">网页总结</option>
+              <option value="study_note">学习笔记</option>
+              <option value="tech_research" selected>技术调研</option>
+              <option value="product_compare">竞品分析</option>
+              <option value="paper_reading">论文阅读</option>
+            </select>
+          </label>
+        </div>
+        <textarea id="queryInput" rows="4" placeholder="输入你的问题；留空则总结当前网页"></textarea>
+        <div class="run-row">
+          <button id="submitButton" type="button">开始调研</button>
+          <button id="cancelButton" type="button" disabled>取消</button>
+        </div>
+      </section>
+
+      <section class="trace-box">
+        <h2>Agent Trace</h2>
+        <ol id="traceList"></ol>
+      </section>
+
+      <section class="report-toolbar">
+        <span id="savedState">尚未生成报告</span>
+        <button id="exportMarkdownButton" type="button" disabled>MD</button>
+        <button id="exportPdfButton" type="button" disabled>PDF</button>
+      </section>
+
+      <pre id="output" class="output" aria-live="polite"></pre>
+
+      <section class="sources-box">
+        <h2>证据来源</h2>
+        <div id="sourceList"></div>
+      </section>
+    </main>
+    <script src="popup.js"></script>
+  </body>
+</html>

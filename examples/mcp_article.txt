@@ -1,0 +1,5 @@
+Model Context Protocol lets AI applications connect to tools, files, databases, and application context through a common interface.
+
+Traditional API integration usually requires every application to write custom request and response logic for each service. MCP focuses on tool discovery, contextual data exchange, and a standard contract for AI assistants.
+
+For students and developers, MCP is useful because it turns a large number of fragmented integrations into reusable tool servers. It is especially relevant for Agent applications that need to search files, call tools, or inspect external systems during a task.

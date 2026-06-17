@@ -1,0 +1,78 @@
+:root {
+  font-family: Inter, "Segoe UI", system-ui, sans-serif;
+  color: #1d2433;
+  background: #f4f7fb;
+}
+
+body {
+  margin: 0;
+}
+
+.options-shell {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 28px;
+}
+
+header,
+.notice,
+label {
+  display: grid;
+  gap: 8px;
+  margin-bottom: 18px;
+}
+
+h1,
+h2,
+p {
+  margin: 0;
+}
+
+p {
+  color: #667085;
+  line-height: 1.55;
+}
+
+label {
+  color: #344054;
+  font-weight: 700;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font: inherit;
+}
+
+.notice {
+  border: 1px solid #d7dee9;
+  border-radius: 8px;
+  background: #ffffff;
+  padding: 14px;
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+}
+
+button {
+  border: 0;
+  border-radius: 8px;
+  background: #1f6feb;
+  color: #ffffff;
+  cursor: pointer;
+  padding: 10px 14px;
+  font-weight: 800;
+}
+
+#resetButton {
+  background: #475467;
+}
+
+#status {
+  margin-top: 12px;
+}

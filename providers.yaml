@@ -1,0 +1,36 @@
+providers:
+  demo:
+    name: Demo Offline Model
+    base_url: offline://demo
+    model: demo-agent
+    api_key_env: ""
+  qwen:
+    name: Qwen
+    base_url: https://dashscope.aliyuncs.com/compatible-mode/v1
+    model: qwen-plus
+    api_key_env: QWEN_API_KEY
+  deepseek:
+    name: DeepSeek
+    base_url: https://api.deepseek.com/v1
+    model: deepseek-chat
+    api_key_env: DEEPSEEK_API_KEY
+  kimi:
+    name: Kimi
+    base_url: https://api.moonshot.cn/v1
+    model: moonshot-v1-8k
+    api_key_env: KIMI_API_KEY
+  zhipu:
+    name: Zhipu GLM
+    base_url: https://open.bigmodel.cn/api/paas/v4
+    model: glm-4-flash
+    api_key_env: ZHIPU_API_KEY
+  openai:
+    name: OpenAI
+    base_url: https://api.openai.com/v1
+    model: gpt-4o-mini
+    api_key_env: OPENAI_API_KEY
+  custom:
+    name: Custom OpenAI-Compatible
+    base_url: ${BASE_URL}
+    model: ${MODEL}
+    api_key_env: API_KEY
